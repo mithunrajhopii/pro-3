@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>email</title>
+        <link rel="stylesheet" href="whatsapp.js">
+    </head>
+    <style>
+            *{
+                
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'poppins',sans-serif;
+}
+    body{
+        background-image: url(turf\ web.webp);
+        width: 75%;
+    height: 75vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10%;
+    color: #131212;
+    font-weight: 800;
+    margin-bottom: 20px;
+    
+    }
+    form label{
+        display: block;
+        margin-bottom: 25px;
+        width: 100px;
+        height: 2px;
+    }   
+    form input,form textarea{
+        width:100% ;
+        padding: 5px ;
+        margin-bottom: 1px ;
+        box-sizing: border-box;
+        resize: vertical;
+    }
+    form button{
+        background: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        margin-top: 5px;
+        border: none;
+        cursor: pointer;
+
+    }    
+
+    form button:hover{
+        background: green;
+
+    }
+    
+    </style>
+    <body>
+       <form>
+        <h1>Send data to whatsapp</h1>
+        <label for ="">Name</label><br>
+        <input type="text" class="name"><br>
+        <label for ="">Email</label><br>
+        <input type="text" class="email"><br>
+        <label for ="">city</label><br>
+        <input type="text" class="city"><br>
+        <label for ="">Timing </label><br>
+        <textarea class="Timing"></textarea><br>
+        <label for ="">Date </label><br>
+        <textarea class="Date"></textarea><br>
+        <label for ="">Turfname</label><br>
+        <textarea class="Turfname"></textarea><br>
+        <button type="button" onclick="sendwhatsapp();">send via whatsapp</button><br>
+        
+           </form>
+           <script>
+            function sendwhatsapp(){
+             var phonenumber = "+918015507906";
+      
+             var name = document.querySelector(".name").value;
+             var email = document.querySelector(".email").value;
+             var city = document.querySelector(".city").value;
+             var Timing = document.querySelector(".Timing").value;
+             var Date= document.querySelector(".Date").value;
+             var Turfname = document.querySelector(".Turfname").value;
+      
+             var url = "https://wa.me/"+ phonenumber + "?text="
+             +"Name : " +name+"%0a"
+             +"Email : " +email+"%0a"
+             +"City : " +city+"%0a"
+             +"Timing : " +Timing+"%0a%0a"
+             +"Date : " +Date+"%0a%0a"
+             +"Turfnamr : " +Turfname+"%0a%0a"
+            
+
+             window.open(url, '_blank').focus();
+            }
+
+      
+             </script>
+      
+    </body>
+</html
