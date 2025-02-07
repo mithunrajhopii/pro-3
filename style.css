@@ -241,7 +241,71 @@ header .menu{
     font-size: x-large;
     color: #eee;
 }
+/* Global Styles */
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  /* Mobile Portrait (320px) */
+  
+  @media only screen and (max-width: 320px) {
+    body {
+      font-size: 14px;
+    }
+    .container {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  
+  /* Mobile Landscape (480px) */
+  
+  @media only screen and (min-width: 321px) and (max-width: 480px) {
+    body {
+      font-size: 16px;
+    }
+    .container {
+      width: 85%;
+      margin: 0 auto;
+    }
+  }
+  
+  /* Tablet Portrait (768px) */
+  
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+      font-size: 18px;
+    }
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  
+  /* Tablet Landscape/Desktop (1024px) */
+  
+  @media only screen and (min-width: 769px) {
+    body {
+      font-size: 20px;
+    }
+    .container {
+      width: 75%;
+      margin: 0 auto;
+    }
+  }
+  
+  
+  
 
 
 
